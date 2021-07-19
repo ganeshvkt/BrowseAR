@@ -46,7 +46,7 @@
   const modelViewer = document.querySelector("model-viewer");
 
   window.switchSrc = (element, name) => {
-    const base = "name;
+    const base = name;
     modelViewer.src = base + '.usdz';
     modelViewer.poster = base + '.png';
     const slides = document.querySelectorAll(".slide");
