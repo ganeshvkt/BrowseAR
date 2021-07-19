@@ -17,7 +17,7 @@
     <!--ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878"-->
     <!-- poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"-->
     
-    <model-viewer ios-src="slide1.usdz"" poster=".png" shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="A 3D model carousel">
+    <model-viewer ios-src="slide1.usdz"" poster="car.png" shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="A 3D model carousel">
   
   <button slot="ar-button" id="ar-button">
     View in your space
@@ -33,15 +33,11 @@
 
   <div class="slider">
     <div class="slides">
-      <button class="slide selected" onclick="switchSrc(this, 'Chair')" style="background-image: url('../../assets/ShopifyModels/Chair.png');">
+      <button class="slide selected" onclick="switchSrc(this, 'slide1')" style="background-image: url('slide1.png');">
 
-      </button><button class="slide" onclick="switchSrc(this, 'Mixer')" style="background-image: url('../../assets/ShopifyModels/Mixer.png');">
+      </button><button class="slide" onclick="switchSrc(this, 'slide2')" style="background-image: url('slide2.png');">
 
-      </button><button class="slide" onclick="switchSrc(this, 'GeoPlanter')" style="background-image: url('../../assets/ShopifyModels/GeoPlanter.png');">
-      
-      </button><button class="slide" onclick="switchSrc(this, 'ToyTrain')" style="background-image: url('../../assets/ShopifyModels/ToyTrain.png');">
-      
-      </button><button class="slide" onclick="switchSrc(this, 'Canoe')" style="background-image: url('../../assets/ShopifyModels/Canoe.png');">    
+      </button><button class="slide" onclick="switchSrc(this, 'slide1')" style="background-image: url('slide1.png');"> 
     </button></div>
   </div>
 </model-viewer>
@@ -50,8 +46,8 @@
   const modelViewer = document.querySelector("model-viewer");
 
   window.switchSrc = (element, name) => {
-    const base = "../../assets/ShopifyModels/" + name;
-    modelViewer.src = base + '.glb';
+    const base = "name;
+    modelViewer.src = base + '.usdz';
     modelViewer.poster = base + '.png';
     const slides = document.querySelectorAll(".slide");
     slides.forEach((element) => {element.classList.remove("selected");});
