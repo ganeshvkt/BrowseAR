@@ -15,15 +15,27 @@
   
   <div id="card5">
    
-    <model-viewer src="BPU.glb"
+    <model-viewer src="anime.glb"
+                  id="paused-change-demo" 
                   ios-src=""
                   poster="Thule.png"
                   alt="Photo Frame"
                   shadow-intensity="1"
                   camera-controls
-                  camera-target="0m 0m -2m"
+                  camera-target="0m 0m 0m"
                   auto-rotate ar>
     </model-viewer>
+    
+    <script>
+(() => {
+  const modelViewer = document.querySelector('#paused-change-demo');
+
+  self.setInterval(() => {
+    modelViewer.animationName = modelViewer.animationName === 'Step1' ?
+      'Step2' : 'Step1';
+  }, 1000.0);
+})();
+</script>
     <section class="attribution">
       <span>
         <h1 style ="color:#666666;"> Item_Height12345</h1>
